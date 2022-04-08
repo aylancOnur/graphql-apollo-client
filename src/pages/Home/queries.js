@@ -6,6 +6,7 @@ export const GET_ALL_POSTS = gql`
       id
       title
       description
+      short_description
       user {
         profile_photo
       }
