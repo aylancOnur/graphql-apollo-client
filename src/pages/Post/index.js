@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { GET_POST_BY_ID } from "./queries";
 import Loading from "components/Loading";
 import { Typography, Image } from "antd";
+import Comments from "./Comments";
 
 const Post = () => {
   const { id } = useParams();
@@ -28,6 +29,7 @@ const Post = () => {
       <Typography.Title level={3}>{post.title}</Typography.Title>
       <Image src={post.cover} />
       <p>{post.description}</p>
+      <Comments post_id={id} />
     </div>
   );
 };
