@@ -13,3 +13,17 @@ export const GET_ALL_POSTS = gql`
     }
   }
 `;
+
+export const POSTS_SUBSCRIPTIONS = gql`
+  subscription {
+    postCreated {
+      id
+      title
+      description
+      short_description
+      user {
+        profile_photo
+      }
+    }
+  }
+`;
